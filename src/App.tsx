@@ -1,10 +1,12 @@
 import { useMemo, useState } from 'react';
 import Navigation from './Components/Navigation';
 import ProductList from './Components/ProductList';
+import type { Product } from './Components/product'; // Correct import for Product interface
+// Correct import for Product interface
 import Search from './Components/Search';
 
 // Mock product data as requested
-const products = [
+const products: Product[] = [ // Explicitly type the products array
   {
     id: 1, name: 'Classic Leather Wallet', price: 75, category: 'Accessories', rating: 4.7,
     image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2xhc3NpYyUyMExlYXRoZXIlMjBXYWxsZXR8ZW58MHx8MHx8fDA%3D'

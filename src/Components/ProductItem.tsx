@@ -1,5 +1,11 @@
+import type { Product } from "./product"; // Import the Product interface
+// Import the Product interface
 
-function ProductItem({ product }) {
+interface ProductItemProps {
+    product: Product; // Define the type for the 'product' prop
+}
+
+function ProductItem({ product }: Readonly<ProductItemProps>) { // Apply the prop type
     const handleAddToCart = () => {
         console.log(`Added ${product.name} to cart.`);
     };
